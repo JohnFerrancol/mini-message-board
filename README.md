@@ -1,16 +1,17 @@
-# Express Template
+# Mini Message Board
 
 [Live Demo](#)<br/><br/>
 [![The Odin Project](https://img.shields.io/badge/The%20Odin%20Project-A9792B?logo=theodinproject&logoColor=fff)](#)
 
 ## Overview
 
-This is a project from [The Odin Project](https://theodinproject.com): [Project: ](#).
+This is a project from [The Odin Project](https://theodinproject.com): [Project: Mini Message Board](https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board). This simple Express project allows users to create a new message and send it to a mock database and view messages from the database.
 
 ## Learning Points
 
--
--
+- Understanding the basics of using Express to create an Express server that receives HTTP requests and uses various app methods
+- Understanding the concepts of routers, controllers and views in Express
+- Understanding the MVC design pattern of a back-end Web Development framework
 
 ## Tech Stack
 
@@ -40,13 +41,13 @@ Getting started on running the webpack server to your localhost, localhost:8080
 1. Cloning the repository
 
 ```sh
-git clone git@github.com:JohnFerrancol/XX.git
+git clone git@github.com:JohnFerrancol/mini-message-board.git
 ```
 
-2. Navigate to XX folder and install npm packages
+2. Navigate to the mini-message-board folder and install npm packages
 
 ```sh
-cd XX && npm install
+cd mini-message-board && npm install
 ```
 
 3. Running the Express server
@@ -59,5 +60,6 @@ npm run start
 
 ## Roadmap
 
-- [ ] XXX
-- [ ] XXX
+- [ ] Create the two routes in the Express application, / and /messages and create an array of messages as the placeholder database
+- [ ] Create Views to view the messages on the index pages and a form on the /messages/new route to allow new messages to be sent
+- [ ] Create a post logic to update the mock database
