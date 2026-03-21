@@ -1,10 +1,18 @@
-<h1>Message Page</h1>
-<ul>
-  <% messages.map(message => { %>
-  <li>
-    <h2><%= message.user %></h2>
-    <p><%= message.text %></p>
-    <p><%= message.added %></p>
-  </li>
-  <% }) %>
-</ul>
+<div class="home">
+  <h1 class="home-header">Message Page</h1>
+
+  <div class="card-container">
+    <% messages.map(message => { %>
+    <div class="card">
+      <div class="card-header">
+        <h2><%= message.user %></h2>
+        <div class="card-date">
+          <p><%= message.added.toLocaleDateString('en-SG') %>,</p>
+          <p><%= message.added.toLocaleTimeString('en-SG').toUpperCase() %></p>
+        </div>
+      </div>
+      <p class="card-text"><%= message.text %></p>
+    </div>
+    <% }) %>
+  </div>
+</div>
