@@ -94,3 +94,61 @@ main .home .card-date {
 main .home .card-text {
   margin-top: 0.5rem;
 }
+
+main .new-message {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+main .new-message .new-message-form {
+  background-color: var(--form-background-color);
+  padding: 2rem 3rem;
+  box-shadow: var(--form-box-shadow);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .new-message .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+main .new-message .input-wrapper label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+main .new-message .input-wrapper input,
+main .new-message .input-wrapper textarea {
+  background-color: inherit;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--form-text-color);
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0.5rem 0.25rem;
+}
+
+main .new-message .input-wrapper input:focus,
+main .new-message .input-wrapper textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+main .new-message .submit-button {
+  background-color: var(--primary-color);
+  color: var(--form-text-color);
+  width: 50%;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border: none;
+  align-self: center;
+}

@@ -21,6 +21,9 @@ const assetsPath = path.join(__dirname, 'public');
 app.use(expressLayouts);
 app.use(express.static(assetsPath));
 
+// Parse incoming POST request data to be converted into a usable JS object
+app.use(express.urlencoded({ extended: true }));
+
 // Set Views engine and Express layout
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

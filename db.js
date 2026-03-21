@@ -11,4 +11,8 @@ const messages = [
   },
 ];
 
-export { messages };
+const addMessage = (newText, newUser) => {
+  messages.push({ text: newText, user: newUser, added: new Date() });
+};
+
+export { messages, addMessage };
