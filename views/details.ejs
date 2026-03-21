@@ -1,0 +1,14 @@
+<div class="details">
+  <h1>Details</h1>
+  <div class="card">
+    <div class="card-header">
+      <h2><%= message.user %></h2>
+      <div class="card-date">
+        <p><%= message.added.toLocaleDateString('en-SG') %>,</p>
+        <p><%= message.added.toLocaleTimeString('en-SG').toUpperCase() %></p>
+      </div>
+    </div>
+    <p class="card-text"><%= message.text %></p>
+    <a href="/"><button class="return-button">Return to homepage</button></a>
+  </div>
+</div>

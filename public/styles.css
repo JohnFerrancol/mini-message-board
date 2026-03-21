@@ -30,6 +30,15 @@ body {
   color: var(--primary-color);
 }
 
+button {
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--form-text-color);
+}
+
 nav {
   background-color: var(--primary-color);
   padding: 1.5rem 3rem;
@@ -72,27 +81,38 @@ main .home .card-container {
   gap: 1rem;
 }
 
-main .home .card {
+main .card {
   background-color: var(--form-background-color);
   padding: 1.5rem 1rem;
   border-radius: 1rem;
   color: var(--form-text-color);
   box-shadow: var(--form-box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-main .home .card-header {
+main .card-header {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-main .home .card-date {
+main .card-date {
   display: flex;
   gap: 0.25rem;
 }
 
-main .home .card-text {
-  margin-top: 0.5rem;
+main .home .open-button,
+main .details .return-button {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+main .home .card:hover .open-button,
+main .details .card:hover .return-button {
+  opacity: 1;
 }
 
 main .new-message {
@@ -141,14 +161,25 @@ main .new-message .input-wrapper textarea:focus {
 }
 
 main .new-message .submit-button {
-  background-color: var(--primary-color);
-  color: var(--form-text-color);
   width: 50%;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-family: inherit;
   font-size: 1.15rem;
-  font-weight: bold;
-  border: none;
+  padding: 0.5rem 1rem;
   align-self: center;
+}
+
+main .new-message .submit-button:hover {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+main .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 5rem;
+}
+
+main .details .card {
+  width: 100%;
 }

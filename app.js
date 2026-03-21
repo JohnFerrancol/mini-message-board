@@ -9,6 +9,7 @@ import createLocals from './middleware/createLocals.js';
 
 import indexRouter from './routes/indexRouter.js';
 import newMessageRouter from './routes/newMessageRouter.js';
+import detailedMessageRouter from './routes/detailedMessageRouter.js';
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use(createLocals);
 // Route handling
 app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
+app.use('/details', detailedMessageRouter);
 
 // Error Handling
 app.use(errorHandler);
