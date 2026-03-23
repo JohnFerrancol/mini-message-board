@@ -36,7 +36,7 @@ npm install npm@latest -g
 
 ### Installation
 
-Getting started on running the webpack server to your localhost, localhost:8080
+Getting started on running the express server to your localhost, localhost:3000
 
 1. Cloning the repository
 
