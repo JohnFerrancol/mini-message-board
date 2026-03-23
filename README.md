@@ -60,6 +60,6 @@ npm run start
 
 ## Roadmap
 
-- [ ] Create the two routes in the Express application, / and /messages and create an array of messages as the placeholder database
-- [ ] Create Views to view the messages on the index pages and a form on the /messages/new route to allow new messages to be sent
-- [ ] Create a post logic to update the mock database
+- [x] Create the two routes in the Express application, / and /messages and create an array of messages as the placeholder database
+- [x] Create Views to view the messages on the index pages and a form on the /messages/new route to allow new messages to be sent
+- [x] Create a post logic to update the mock database
