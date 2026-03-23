@@ -1,12 +1,12 @@
-import { messages } from '../db.js';
+import { getAllMessages } from '../models/messages.js';
 
-const createLocals = (req, res, next) => {
+const createLocals = async (req, res, next) => {
   res.locals.links = [
     { href: '/', text: 'Odin Message Board' },
     { href: '/new', text: 'New Message', icon: 'fas fa-envelope-open' },
   ];
 
-  res.locals.messages = messages;
+  res.locals.messages = await getAllMessages();
 
   next();
 };

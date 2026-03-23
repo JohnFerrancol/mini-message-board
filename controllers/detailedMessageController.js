@@ -1,7 +1,7 @@
-import { getMessageById } from '../db.js';
+import { getMessageById } from '../models/messages.js';
 
-const getDetailsPage = (req, res) => {
-  const message = getMessageById(Number(req.params.messageId));
+const getDetailsPage = async (req, res) => {
+  const message = await getMessageById(Number(req.params.messageId));
   res.render('details', { title: 'Details', message: message });
 };
 

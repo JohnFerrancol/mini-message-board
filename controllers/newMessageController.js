@@ -1,4 +1,4 @@
-import { addMessage } from '../db.js';
+import { addMessage } from '../models/messages.js';
 
 const getNewMessagePage = (req, res) => {
   res.render('newMessage', { title: 'New Message' });
