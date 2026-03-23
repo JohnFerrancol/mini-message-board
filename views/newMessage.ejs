@@ -2,21 +2,44 @@
   <form class="new-message-form" method="POST" action="/new">
     <h1>Add New Message</h1>
     <div class="input-wrapper">
-      <label for="messageUser">User:</label>
-      <input type="text" id="messageUser" name="messageUser" required />
+      <% const messageUserError = errors?.find(e => e.path === 'messageUser');
+      %>
+      <label
+        for="messageUser"
+        class="<%= messageUserError ? 'label-error' : '' %>"
+        >User:</label
+      >
+      <input
+        type="text"
+        id="messageUser"
+        name="messageUser"
+        required
+        class="<%= messageUserError ? 'input-error' : '' %>"
+      />
     </div>
+    <% if (messageUserError) { %>
+    <p class="error-msg"><%= messageUserError.msg %></p>
+    <% } %>
     <div class="input-wrapper">
-      <label for="messageText">Message:</label>
+      <% const messageTextError = errors?.find(e => e.path === 'messageText');%>
+      <label
+        for="messageText"
+        class="<%= messageTextError ? 'label-error' : '' %>"
+        >Message:</label
+      >
       <textarea
         type="text"
         id="messageText"
         name="messageText"
         rows="4"
         cols="50"
+        class="<%= messageTextError ? 'input-error' : '' %>"
         required
       ></textarea>
     </div>
-
+    <% if (messageTextError) { %>
+    <p class="error-msg"><%= messageTextError.msg %></p>
+    <% } %>
     <button class="submit-button" type="submit" value="Submit">
       Add Message
     </button>

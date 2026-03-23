@@ -7,6 +7,7 @@ const createLocals = async (req, res, next) => {
   ];
 
   res.locals.messages = await getAllMessages();
+  res.locals.errors = [];
 
   next();
 };
